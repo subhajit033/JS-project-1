@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            font-family: cursive;
+            /* font-size: 14px; */
+        }
+    </style>
+</head>
+
+<body class="bg-orange-400 h-[100vh] flex justify-center items-center">
+    <div>
+        <div class="container w-80 bg-pink-500 text-center p-4 space-y-4 rounded-lg shadow-lg">
+            <p>Real-time Character Counter</p>
+            <div>
+                <textarea name="for-message" id="input-text" cols="30" rows="4"
+                    class="border border-black px-2 resize-none py-1" placeholder="start typing here"></textarea>
+            </div>
+            <div class="flex justify-between items-center text-gray-700">
+                <p class="text-sm">Total Chararacters: <span id="total-ch">0</span></p>
+                <p class="flex justify-between text-gray-700">Remaining:  <span id="remaining-ch" class="text-blue-700">50</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-[100vh] bg-yellow-400 flex justify-center items-center">
+    <div>
+        <div id="app" class="bg-white px-8 text-center space-y-4 py-8 shadow-xl rounded-lg">
+            <div class="flex flex-col justify-center items-end">
+                <p class="text-green-800 font-semibold">score: <span id="score">0</span></p>
+                <p class="text-xl font-semibold">What is <span id="num1">2</span> multiply by <span id="num2">3</span> ?</p>
+            </div>
+            <input id="answer" class="border-2 border-green-700 px-4 py-1 text-center" type="text" placeholder="Enter your answer" autofocus autocomplete="off">
+            <br>
+            <button id="btn" class="bg-green-700 px-12 py-1 rounded-md font-semibold text-white hover:brightness-90">Submit</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

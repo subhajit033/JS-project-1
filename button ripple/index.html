@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Ripple effect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .btn{
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.788);            
+            position: relative;
+            overflow: hidden;
+        }
+        .btn::before{
+            content: " ";
+            position: absolute;
+            background-color: orangered;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            left: var(--xPos);
+            top: var(--yPos);
+            transform: translate(-50%, -50%);
+        }
+        .btn:hover::before{
+            width: 300px;
+            height: 300px;
+            transition: width .5, height .5;
+            /* transition: ease-in-out; */
+            transition-duration: 1s;
+            /* transition-timing-function: ease-in-out; */
+            
+            /* transition-delay: 500s; */
+        }
+    </style>
+</head>
+<body class="min-h-[100vh] flex justify-center items-center bg-[aliceblue]">
+    <a href="#" class="btn px-6 py-3 bg-pink-300 rounded-md font-semibold"><span class="relative z-10">Button</span></a>
+    <script src="script.js"></script>
+    
+</body>
+</html>

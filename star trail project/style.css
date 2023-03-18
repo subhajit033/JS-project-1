@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes starFalling {
+    0% {
+        transform: translate(-50%, -50%);
+        filter: hue-rotate(0deg);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translate(-4050%, 5000%);
+        filter: hue-rotate(720deg);
+        opacity: 0.9;
+    }
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-image {
+     width: 20rem;
+    /* height: 15rem; */
+    border-radius: 30% 40% 70% 30% / 35% 30% 70% 65%;
+    background: #1D1F20;
+}
+
+
+
+span {
+    width: 100px;
+    height: 100px;
+    background-image: url('https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_universe_galaxy_star_falling_meteor_comet_shiny-128.png');
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: starFalling 10s linear;
+    z-index: -10;
+    /* animation-delay: 200ms; */
+}

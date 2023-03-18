@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
+
+}
+
+.slider-container {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.703);
+}
+
+.image-container {
+    display: flex;
+    transition-property: all;
+    transition: ease-in-out;
+    transition-duration: 800ms;
+
+}
+
+.btn {
+    position: absolute;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.674);
+    top: 50%;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.prev {
+    left: 18px;
+}
+
+.next {
+    right: 18px;
+}
